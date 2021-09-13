@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Start */
+.open-btn {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blueBox {
+  text-decoration: none;
+  background-color: #00a5e1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 30px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.blueBox:hover,
+.blueBox:focus {
+  padding: 26px 31px;
+}
+
+/* Overlay Area for mobile devices */
+
+.overlay {
+  width: 100%;
+  min-height: 100%;
+  background-color: gray;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  visibility: hidden;
+}
+
+.is-open {
+  visibility: visible;
+}
+
+.overlay-wrapper {
+  margin: auto;
+  width: 95%;
+}
+
+/* source: https://www.geeksforgeeks.org/make-a-div-horizontally-scrollable-using-css/ */
+
+h3 {
+  color: white;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 6px;
+}
+
+.categories-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-template-rows: repeat(5, 1fr);
+  gap: 6px;
+}
+
+.categories {
+  color: #00a5e1;
+  font-weight: 700;
+  font-size: 0.9rem;
+  background-color: white;
+  padding: 13px 5px;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.categories:hover,
+.categories.active {
+  color: white;
+  background-color: #00a5e1;
+  cursor: pointer;
+}
+
+.textfield {
+  color: white;
+  background-color: #00a5e1;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -46px;
+  right: -7px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 1.8em;
+  border: none;
+  background: none;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+}
+
+/* Media Queries for medium and larger screens */
+
+@media screen and (min-width: 576px) {
+  .overlay-wrapper {
+    width: 80%;
+  }
+
+  .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .categories-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .textfield {
+    padding-right: 15%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .blueBox {
+    padding: 30px 35px;
+    font-size: 1.3em;
+  }
+
+  .blueBox:hover,
+  .blueBox:focus {
+    padding: 32px 37px;
+  }
+
+  .overlay-wrapper {
+    width: 65%;
+  }
+
+  .categories {
+    padding-bottom: 40px;
+  }
+}

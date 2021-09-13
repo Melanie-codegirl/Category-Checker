@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Probearbeit Melanie Schwarke - Frontend Developer</title>
+  </head>
+  <body>
+    <button class="open-btn" id="open-btn">
+      <a class="blueBox" href="#">Alle Kategorien</a>
+    </button>
+    <section class="overlay" id="overlay">
+      <div class="overlay-wrapper">
+        <h3>Alle Kategorien</h3>
+        <div class="container">
+          <div class="categories-wrapper">
+            <div class="categories" data-key="carreer">Karrierewege</div>
+            <div class="categories" data-key="promotion">Promotion</div>
+            <div class="categories" data-key="habilitation">Habilitation</div>
+            <div class="categories" data-key="juniorprof">Juniorprofessur</div>
+            <div class="categories" data-key="berufung">Berufungsverfahren</div>
+            <div class="categories" data-key="arbeitsplatz">Arbeitsplatz</div>
+            <div class="categories" data-key="familie">
+              Familie, Partnerschaft, Alltag
+            </div>
+            <div class="categories" data-key="mobilität">Mobilität</div>
+            <div class="categories" data-key="ausland">
+              Blick aus dem Ausland
+            </div>
+            <div class="categories" data-key="allgemein">Allgemein</div>
+          </div>
+          <div class="textfield">
+            <h3 id="js-headline"></h3>
+            <p class="" id="js-copy"></p>
+          </div>
+          <button class="close-btn" id="js-close">&times;</button>
+        </div>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
